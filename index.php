@@ -20,6 +20,11 @@
         <div class="container">
             <div class="row align-items-center" style="min-height:100vh;">
                 <div class="col-md-6 offset-md-3">
+                    <div class="status">
+                        <?php if(isset($_GET['status']) AND !empty($_GET['status'])): ?>
+                            <p class="alert alert-danger"> <?=  $_GET['message']; ?></p>
+                        <?php endif; ?>
+                    </div>
                     <h1>My Website</h1>
                     <form action = "<?= base_url(); ?>auth.php" method = "post">
                         <!-- CSRF TOKEN FIELD -->
