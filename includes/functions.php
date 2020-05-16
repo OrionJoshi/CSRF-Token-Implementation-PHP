@@ -1,5 +1,5 @@
 <?php
-    
+    session_start();
     function get_connection(){
         $connection = mysqli_connect('localhost','root','','csrf');
 
@@ -51,6 +51,13 @@
 
     function base_url(){
         return 'http://localhost/CSRF-Token-Implementation-PHP/';
+    }
+
+    function csrf_token(){
+        $token = bin2hex(random_bytes(32));
+        $_SESSION['token'] = $token;
+
+        return $token;
     }
 
 ?>
