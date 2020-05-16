@@ -10,6 +10,16 @@
 
         //Authentication
         $authenticated = authenticate($email, $password);
+
+        if( is_array($authenticated) AND !empty($authenticated)){
+            $_SESSION['user'] = $authenticated;
+            header('Location: profile.php');
+        }else{
+            header('Location:index.php?status=error$message=Authentication Failed!');
+        }
+    }else{
+        header('Location:index.php?status=error$message=Please login to your account');
+
     }
 
 ?>
