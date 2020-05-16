@@ -1,3 +1,4 @@
+<?php  require_once './includes/functions.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +14,7 @@
             <div class="row align-items-center" style="min-height:100vh;">
                 <div class="col-md-6 offset-md-3">
                     <h1>My Website</h1>
-                    <form action="" method="post">
+                    <form action = "<?= base_url(); ?>" method = "post">
                         <div class="form-group">
                             <input type="text" name="email" placeholder="Email" class="form-control">
                         </div>

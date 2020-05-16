@@ -27,7 +27,7 @@
             if(mysqli_stmt_num_rows($statment)){
 
                 if(password_verify($password, $db_user_password)){
-                    return ['loggedin' => true, 'email' => $db_user_email]
+                    return ['loggedin' => true, 'email' => $db_user_email];
                 }
                 return false;
             }   
