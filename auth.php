@@ -5,8 +5,8 @@
     require_once './includes/functions.php';
 
     if(isset($_POST['submit'])){
-        $email = mysqli_real_escape_string($_POST['email']);
-        $password  = mysqli_real_escape_string($_POST['password']);
+        $email = $_POST['email'];
+        $password  = $_POST['password'];
 
         //Authentication
         $authenticated = authenticate($email, $password);
