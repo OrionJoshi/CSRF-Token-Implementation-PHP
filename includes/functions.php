@@ -47,4 +47,8 @@
         exit();
     }
 
+    function base_url(){
+        return 'http://localhost/CSRF-Token-Implementation-PHP/';
+    }
+
 ?>
